@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Vebko 3D Model</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="Assets/CSS/styles.css" rel="stylesheet"/>
+  <link rel="icon" href="Assets/Image/Vebko_EN.ico" type="image/x-icon">
+  <!-- bootstrap -->
+  <!-- <link type="text/css" href="Assets/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+  <!-- <script src="Assets/bootstrap-5.3.0/js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script> -->
+  <!-- jquery -->
+  <!-- <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script> -->
+  <!-- modelviewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  
+  <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap-utilities.css" >
+  <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap.css" >
+  <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap-grid.css" >
+  <script src="Assets/bootstrap-5.3.0/js/bootstrap.js"></script>
+  <script src="Assets/bootstrap-5.3.0/js/bootstrap.bundle.js"></script>
+  <script src="Assets/JS/jquery-3.6.3.js"></script>
+</head>
+
+<body>
+  <model-viewer id="AMT105" src="Assets/3D Models/AMT105.glb" ar-modes="webxr scene-viewer quick-look" ar ios-src="Assets/3D Models/AMT105.glb"
+     alt="AMT105" shadow-intensity="1"  camera-orbit="18deg 80deg 350.4m" field-of-view="30deg"
+     cameracontrols="false">
+
+     <button type="button" id="Menu" class="btn btn-outline-info btn-sm  btn_Menu" >
+      <img style="padding-top:3px;padding-bottom:3px;" src="Assets/Image/hamburger.png" width="25px">
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+
+    <div class="update-bar"></div>  
+    </div>
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+    <div class="menu_list p-3" style="z-index:10000000000;">
+      <select class="Font-Size form-select" id="category" aria-label="Default select example">
+        <option class="Font-Size" value="Offices">Offices and Agency</option>
+        <option class="Font-Size" value="AMT105" selected>Tester AMT105</option>
+        <option class="Font-Size" value="AMT205" disabled>Tester AMT205</option>
+        <option class="Font-Size" value="AMR" disabled>Relay AMR</option>
+      </select>
+      <div class="form-check mt-3 pl">
+        <input class="form-check-input "  type="checkbox" value="" id="CameraControl"  >
+        <label class="form-check-label" for="CameraControl">
+          Camera Control
+        </label>
+      </div>
+      <button type="button"  id="close_menu" class="btn btn-sub m-2 mt-1 display_none">Close Menu
+        <img class="float-start border-end border-2" src="Assets/Image/fast-forward-double-right-arrows-symbol.png">
+      </button>
+      <hr>
+      <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.0rad 1.35rad 315m" id="Front_AMT105"> Front Panel
+      </button>
+      <button type="button" class="btn btn-sub m-2 mt-0" data_orbit="3.15rad 1.45rad 315m" id="Back_AMT105"> Back Panel
+      </button>
+      <button type="button" class="btn btn-sub m-2 mt-0" data_orbit="0.5rad 1.25rad 315m" id="Physical_AMT105"> Physical
+      </button>
+    </div>
+     <!-- fornt panel point -->
+    <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-1" id="HighVoltage" side="Front"
+      data-surface="122 0 40076 39987 40082 0.443 0.197 0.360" data-visibility-attribute="visible" data_orbit='-0.1rad 1.3 200m'>
+      <div class="HotspotAnnotation d-none ">High Voltage, Low Current Generators</div>
+    </button>
+    <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-2" id="LowVoltage" side="Front"
+      data-surface="122 0 39815 39910 39909 0.268 0.025 0.709" data-visibility-attribute="visible"   data_orbit='-0.2rad 1.1 200m'>
+      <div class="HotspotAnnotation d-none ">Low Voltage, High Current Generators</div>
+    </button>
+    <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-3" id="AnalogBinary" side="Front"
+      data-surface="118 0 2680 2681 2682 0.014 0.658 0.328" data-visibility-attribute="visible"  data_orbit='-0.1rad 1.3 200m'>
+      <div class="HotspotAnnotation d-none ">AC/DC Analog Binary Inputs</div>
+    </button>
+    <button class="Hotspot  Hotspot_Front_AMT105 d-none"  slot="hotspot-4"  id="VoltageMeasuring" side="Front" 
+      data-surface="122 0 38993 38994 38995 0.418 0.479 0.103" data-visibility-attribute="visible"  data_orbit='0rad 1.3 200m'>
+      <div class="HotspotAnnotation d-none">AC/DC Voltage Measuring Input</div>
+    </button>
+    <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-5" id="CurrentMeasuring" side="Front"
+      data-surface="91 0 2561 2562 2563 0.115 0.536 0.350" data-visibility-attribute="visible"  data_orbit='0.2rad 1.3 200m'>
+      <div class="HotspotAnnotation d-none">AC/DC Current Measuring Input</div>
+    </button> 
+    <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-6" id="BinaryOutputs" side="Front"
+      data-surface="115 0 1107 1108 1109 0.429 0.059 0.512" data-visibility-attribute="visible"  data_orbit='.3rad 1.3 200m'>
+      <div class="HotspotAnnotation d-none">Binary Outputs</div>
+    </button>
+    <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-7" id="CombinationCable" side="Front"
+      data-surface="119 0 12349 12350 12351 0.085 0.644 0.271" data-visibility-attribute="visible"  data_orbit='-0.3rad 1.3 200m'>
+      <div class="HotspotAnnotation d-none">Combination Cable</div>
+    </button>
+    <!-- back panel point -->
+    <button class="Hotspot  Hotspot_Back_AMT105 d-none" slot="hotspot-8" id="GPS"  side="Back"
+      data-surface="74 0 33372 33374 33376 0.417 0.066 0.518" data-visibility-attribute="visible" data_orbit="3.3rad 1.45rad -900m">
+      <div class="HotspotAnnotation d-none">GPS</div>
+    </button>
+    <button class="Hotspot Hotspot_Back_AMT105 d-none" slot="hotspot-9" id="PCconnection" side="Back"
+      data-surface="74 0 28142 28143 28144 0.215 0.091 0.694" data-visibility-attribute="visible" data_orbit="3.15rad 1.45rad 200m">
+      <div class="HotspotAnnotation d-none">PC connection</div>
+    </button>
+    <button class="Hotspot  Hotspot_Back_AMT105 d-none" slot="hotspot-10"  id="Powersupply" side="Back"
+      data-surface="74 0 33525 33519 33526 0.460 0.130 0.409" data-visibility-attribute="visible" data_orbit="2.9rad 1.45rad 200m">
+      <div class="HotspotAnnotation d-none">Power supply</div>
+    </button>
+    <!-- Physical point -->
+    <button class="Hotspot  Hotspot_Physical_AMT105 d-none" slot="hotspot-11" id="PhysicalCharacteristic" side="Physical"
+      data-surface="172 0 1465 1466 1467 0.503 0.223 0.273" data-visibility-attribute="visible" data_orbit="0.5rad 1.25rad 315m">
+      <div class="HotspotAnnotation d-none">Physical Characteristic</div>
+    </button>
+  </model-viewer>
+    <!-- Tables HighVoltage-->
+    <table id="HighVoltage_Table" class="overflow-scroll table table-sm text-center table-responsive d-none  table-hover  table-data border-dark-subtle">
+      <tbody>
+        <tr>
+          <th colspan="3" class="text-center header-color  text-light"><h5>High Voltage, Low Current Generators<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+        </tr>
+        <tr class="tr-border">
+         <th  class="align-middle Bg-TH" rowspan="5">Voltage</th>
+         <td class="align-middle" rowspan="2">4 Phase (L-N)</td>
+         <td class="align-middle">AC: 4 X 0 ... 150 V</td>
+        </tr>
+        <tr>
+          <td class="align-middle">DC: 4 X 0 ... 210 V</td>
+        </tr>
+         <tr>
+          <td class="align-middle">Seris and parallel</td>
+          <td class="align-middle">Yes</td>
+         </tr>
+        <tr>
+          <td class="align-middle">Resolution</td>
+          <td class="align-middle">2 mV</td>
+        </tr>
+         <tr>
+          <td class="align-middle">Accuracy</td>
+          <td class="align-middle">0.2% or 20 mV</td>
+        </tr>
+        <tr>
+          <th class="align-middle Bg-TH" rowspan="3">Phase</th>
+          <td class="align-middle">range</td>
+          <td class="align-middle">0 to 360</td>
+        </tr>
+        <tr>
+           <td class="align-middle">Resolution</td>
+           <td class="align-middle">0.001</td>
+        </tr>
+        <tr>
+           <td class="align-middle">Accuracy</td>
+           <td class="align-middle">0.1</td>
+        </tr>
+        <tr>
+          <th class="align-middle Bg-TH" rowspan="3">Frequency</th>
+          <td class="align-middle">range</td>
+          <td class="align-middle">0 ... 10 kHz</td>
+        </tr>
+        <tr>
+           <td class="align-middle">Resolution</td>
+           <td class="align-middle">1 μHz1</td>
+        </tr>
+        <tr>
+           <td class="align-middle">Accuracy</td>
+           <td class="align-middle">1 μHz</td>
+        </tr>
+        <tr>
+          <th class="align-middle Bg-TH" rowspan="2">Recording</th>
+          <td class="align-middle">Sampling Rate</td>
+          <td class="align-middle">1.2 ms</td>
+        </tr>
+        <tr>
+           <td class="align-middle">Variable</td>
+           <td class="align-middle">Currents</td>
+        </tr>
+        <tr>
+          <th class="align-middle Bg-TH" rowspan="2">Protection</th>
+          <td class="align-middle" >Detection</td> 
+          <td class="align-middle" >Power according to power curves</td>
+        </tr>
+        <tr>
+          <td class="align-middle">Type</td>
+          <td class="align-middle">Test off</td>
+       </tr>
+       <tr>
+        <th class="align-middle Bg-TH" >Connection Banana Sockets</th>
+        <td colspan="2" class="align-middle" >4 mm (0.16 in) banana sockets</td> 
+      </tr>
+      <tr>
+        <th class="align-middle Bg-TH" >Connection Combination Socket</th>
+        <td colspan="2" class="align-middle" >Group A</td> 
+      </tr>
+      <tr>
+        <th class="align-middle Bg-TH" >LED</th>
+        <td colspan="2" class="align-middle" >Green (1 Color)</td> 
+      </tr>
+      
+      </tbody>
+    </table>
+    <!-- Tables LowVoltage-->
+    <table id="LowVoltage_Table" class="overflow-scroll table table-sm text-center table-responsive d-none  table-hover table-data border-dark-subtle">
+      <tbody>
+        <tr>
+          <th colspan="4" class="text-center header-color  text-light"><h5 class="m-1 p-1">Low Voltage, High Current Generators<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+        </tr>
+        <tr>
+          <th rowspan="6" class="align-middle Bg-TH" >Current</th>
+          <td rowspan="4" class="align-middle">Normal Mode</td> 
+          <td rowspan="2"class="align-middle">6 Phase (L-N)</td>
+          <td class="align-middle">AC: 6 X 0 ... 32 A</td>
+        </tr>
+        <tr>
+          <td class="align-middle">DC: 6 X 0 ... 32 A</td>
+        </tr>
+        <tr>
+          <td class="align-middle" >Resolution</td>
+          <td  colspan="4"  class="align-middle">85 μA</td> 
+        </tr>
+        <tr>
+          <td class="align-middle" >Accuracy</td>
+          <td  colspan="4"  class="align-middle">0.2% or 1 mA</td> 
+        </tr>
+        <tr>
+          <td class="align-middle" >Maximum Compliance Voltage</td>
+          <td colspan="4" class="align-middle">12V</td> 
+        </tr>
+        <tr>
+          <td class="align-middle" >Seris and parallel</td>
+          <td colspan="4" class="align-middle">Yes</td> 
+        </tr>
+       <tr>
+          <th rowspan="3" class="align-middle Bg-TH" >Phase</th>
+          <td  class="align-middle">range</td> 
+          <td colspan="3"  class="align-middle">0 to 360</td>
+        </tr>
+        <tr>
+          <td   class="align-middle">Resolution</td> 
+          <td colspan="3"  class="align-middle">0.001</td>
+        </tr>
+        <tr>
+          <td  class="align-middle">Accuracy</td> 
+          <td  colspan="4" class="align-middle">1 uHz</td>
+        </tr>
+        <tr>
+          <th rowspan="3" class="align-middle Bg-TH" >Frequency</th>
+          <td  class="align-middle">range</td> 
+          <td  colspan="4"  class="align-middle">0...2.5 Hz</td>
+        </tr>
+        <tr>
+          <td  class="align-middle">Resolution</td> 
+          <td  colspan="4"  class="align-middle">1 uHz</td>
+        </tr>
+        <tr>
+          <td  class="align-middle">Accuracy</td> 
+          <td  colspan="4"  class="align-middle">1 uHz</td>
+        </tr>
+        <tr>
+          <th rowspan="2" class="align-middle Bg-TH" >Recording</th>
+          <td  class="align-middle">Sampling Rate</td> 
+          <td colspan="3"  class="align-middle">1.2 ms</td>
+        </tr>
+        <tr>
+          <td  class="align-middle">Variable</td> 
+          <td colspan="3"  class="align-middle">Currents</td>
+        </tr>
+        <tr>
+          <th rowspan="5" class="align-middle Bg-TH" >Protection</th>
+          <td rowspan="3" class="align-middle">Detection</td> 
+          <td rowspan="3" class="align-middle">Maximum Neutral Current</td>
+          <td  class="align-middle">32A : Unlimited</td>
+        </tr>
+        <tr>
+          <td  class="align-middle">64 A : 3 s</td> 
+        </tr>
+        <tr>
+          <td  class="align-middle">100 A : 300 ms</td> 
+        </tr>
+        <tr>
+          <td  class="align-middle">Setting</td> 
+          <td  colspan="2" class="align-middle">Softrware Controlled:Time,Enable</td> 
+        </tr>
+        <tr>
+          <td  class="align-middle">Type</td> 
+          <td  colspan="2" class="align-middle">Test off</td> 
+        </tr>
+        <tr>
+          <th  class="align-middle Bg-TH" >Connection Banana Sockets</th>
+          <td  colspan="4" class="align-middle">4 mm (0.16 in) banana sockets / 32 A continuosly</td> 
+        </tr>
+        <tr>
+          <th  class="align-middle Bg-TH" >Connection Combination Socket</th>
+          <td colspan="4"  class="align-middle">Group A/B (15 A continously max)</td> 
+        </tr>
+        <tr>
+          <th  class="align-middle Bg-TH" >LED</th>
+          <td  colspan="4" class="align-middle">Green (1 Color)</td> 
+        </tr>
+      </tbody>
+    </table>
+    <!-- Tables AnalogBinary-->
+    <table id="AnalogBinary_Table" class="overflow-scroll table table-sm text-center table-responsive d-none  table-hover table-data border-dark-subtle">
+      <tbody>
+        <tr>
+          <th colspan="5" class="text-center header-color  text-light"><h5>AC/DC Analog Binary Inputs<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+        </tr>
+        <tr>
+          <th  class="align-middle Bg-TH" >Number</th>
+          <td colspan="3" class="align-middle">8</td> 
+        </tr>
+        <tr>
+          <th rowspan="2" class="align-middle Bg-TH" >Dry</th>
+          <td class="align-middle">Open circuit voltage</td> 
+          <td colspan="3" class="align-middle">5 V</td> 
+        </tr>
+        <tr>
+          <td  class="align-middle">Short circuit viltage</td> 
+          <td colspan="3" class="align-middle">Software controlled</td> 
+        </tr>
+
+
+        <tr>
+          <th rowspan="9" class="align-middle Bg-TH">Wet</th> 
+          <td rowspan="3" class="align-middle">Range 1: 0 ... ±4.5 V(Peak)</td> 
+          <td class="align-middle">Accuracy</td> 
+          <td colspan="3"  class="align-middle">150 μV</td> 
+        </tr>
+        <tr>
+          <td  class="align-middle">Resolution</td> 
+          <td  colspan="3"  class="align-middle">35 μV</td> 
+        </tr>
+        <tr >
+          <td  class="align-middle">Impedance</td> 
+          <td  colspan="3" class="align-middle">493.75 KΩ</td> 
+        </tr>
+        <tr>
+          <td rowspan="3"  class="align-middle">Range 1: 0 ... ±30 V(Peak)</td> 
+          <td class="align-middle">Accuracy</td> 
+          <td colspan="3"  class="align-middle">1 mV</td> 
+        </tr>
+        <tr>
+          <td  class="align-middle">Resolution</td> 
+          <td  colspan="3" class="align-middle">250 μV</td> 
+        </tr>
+        <tr >
+          <td  class="align-middle">Impedance</td> 
+          <td  colspan="3" class="align-middle">414783 KΩ</td> 
+        </tr>
+        <tr>
+          <td rowspan="3"  class="align-middle">Range 1: 0 ... ±180 V(Peak)</td> 
+          <td  class="align-middle">Accuracy</td> 
+          <td  colspan="3" class="align-middle">10 mV</td> 
+        </tr>
+        <tr>
+          <td  class="align-middle">Resolution</td> 
+          <td  colspan="3" class="align-middle">1.5 mV</td> 
+        </tr>
+        <tr >
+          <td  class="align-middle">Impedance</td> 
+          <td  colspan="3" class="align-middle">405.267 KΩ</td> 
+        </tr>
+        <tr >
+          <th  class="align-middle Bg-TH">Recording</th> 
+          <td  class="align-middle">Sampling Rate</td> 
+          <td  colspan="3" class="align-middle">400 us</td> 
+        </tr>
+        <tr >
+          <th  rowspan="3"  class="align-middle Bg-TH">Protection</th> 
+          <td  class="align-middle">Detection</td> 
+          <td  colspan="3" class="align-middle">Over voltage</td> 
+        </tr>
+        <tr >
+          <td  class="align-middle">Setting</td> 
+          <td  colspan="3" class="align-middle">Softrware Controlled: Time,Enable</td> 
+        </tr>   
+        <tr >
+          <td  class="align-middle">Type</td> 
+          <td  colspan="3" class="align-middle">Test off, Change to Dry</td> 
+        </tr>
+
+        <tr >
+          <th  class="align-middle Bg-TH">Galvanic Isolation</th> 
+          <td colspan="4" class="align-middle">8 Group (1+1+1+1+1+1+1+1)</td> 
+        </tr>
+        <tr >
+          <th  class="align-middle Bg-TH">LED</th> 
+          <td colspan="4" class="align-middle">Green (1 Color)</td> 
+        </tr>
+        <tr >
+      </tbody>
+    </table>
+    <!-- Tables VoltageMeasuring-->
+    <table id="VoltageMeasuring_Table" class="overflow-scroll table table-sm text-center table-responsive d-none  table-hover table-data border-dark-subtle">
+          <tbody>
+            <tr>
+              <th colspan="3" class="text-center header-color  text-light"><h5>AC/DC Analog Binary Inputs<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+            </tr>
+            <tr>
+              <th rowspan="3" class="align-middle Bg-TH" >Range 1: 0 ... ±400 mV(Peak)</th>
+              <td class="align-middle">Accuracy</td> 
+              <td colspan="3" class="align-middle">20 μV</td> 
+            </tr>            
+            <tr>
+              <td class="align-middle">Resolution</td> 
+              <td colspan="3" class="align-middle">3 μV</td> 
+            </tr>  
+            <tr>
+              <td class="align-middle">Impedance</td> 
+              <td colspan="4" class="align-middle">54.7826 KΩ</td> 
+            </tr>
+            <tr>
+              <th class="align-middle Bg-TH" >Recording</th>
+              <td class="align-middle">Sampling Rate</td> 
+              <td colspan="4" class="align-middle">400 us</td> 
+            </tr> 
+            <tr>
+              <th rowspan="3" class="align-middle Bg-TH" >Protection</th>
+              <td class="align-middle">Detection</td> 
+              <td colspan="3" class="align-middle">Over voltage</td> 
+            </tr>  
+            <tr>
+              <td class="align-middle">Setting</td> 
+              <td colspan="4" class="align-middle">Softrware Controlled: Time , Enable</td> 
+            </tr>            
+            <tr>
+              <td class="align-middle">Type</td> 
+              <td colspan="3" class="align-middle">Test off</td> 
+            </tr>  
+            <tr>
+              <th class="align-middle Bg-TH" >Protection</th>
+              <td colspan="3" class="align-middle">1 Group</td> 
+            </tr> 
+            <tr>
+              <th class="align-middle Bg-TH" >LED</th>
+              <td colspan="3"class="align-middle">Green (1 Color)</td> 
+            </tr>  
+        
+          </tbody>
+    </table>
+     <!-- Tables CurrentMeasuring-->
+    <table id="CurrentMeasuring_Table" class="overflow-scroll  table table-sm text-center table-responsive d-none  table-hover table-data border-dark-subtle">
+      <tbody>
+        <tr>
+          <th colspan="3" class="text-center header-color  text-light"><h5>AC/DC Current Measuring Input<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+        </tr>
+        <tr>
+          <th rowspan="3" class="align-middle Bg-TH" >Range 2: 0 ... ± 800 mA</th>
+          <td class="align-middle">Accuracy</td> 
+          <td colspan="3" class="align-middle">50 μA</td> 
+        </tr>            
+        <tr>
+          <td class="align-middle">Resolution</td> 
+          <td colspan="3" class="align-middle">6 μA</td> 
+        </tr>  
+        <tr>
+          <td class="align-middle">shunt</td> 
+          <td colspan="4" class="align-middle">1Ω</td> 
+        </tr>
+        <tr>
+          <th class="align-middle Bg-TH" >Recording</th>
+          <td class="align-middle">Sampling Rate</td> 
+          <td colspan="4" class="align-middle">400 us</td> 
+        </tr> 
+        <tr>
+          <th rowspan="3" class="align-middle Bg-TH" >Protection</th>
+          <td class="align-middle">Detection</td> 
+          <td colspan="3" class="align-middle">Over current</td> 
+        </tr>  
+        <tr>
+          <td class="align-middle">Setting</td> 
+          <td colspan="4" class="align-middle">Softrware Controlled: Time , Enable</td> 
+        </tr>            
+        <tr>
+          <td class="align-middle">Type</td> 
+          <td colspan="3" class="align-middle">Test off</td> 
+        </tr>  
+        <tr>
+          <th class="align-middle Bg-TH" >Galvanic Isolation</th>
+          <td colspan="3" class="align-middle">1 Group</td> 
+        </tr> 
+        <tr>
+          <th class="align-middle Bg-TH" >LED</th>
+          <td colspan="3"class="align-middle">Green (1 Color)</td> 
+        </tr>  
+      
+      </tbody>
+    </table>  
+     <!-- Tables BinaryOutputs-->  
+    <table id="BinaryOutputs_Table" class="overflow-scroll table table-sm text-center table-responsive d-none  table-hover table-data border-dark-subtle">
+      <tbody>
+        <tr>
+          <th colspan="4" class="text-center header-color  text-light"><h5>Binary Outputs<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+        </tr>
+        <tr>
+          <th class="align-middle Bg-TH" >Type</th>
+          <td colspan="3" class="align-middle">Electro mechanical relay contacts</td> 
+        </tr>            
+        <tr>
+          <th class="align-middle Bg-TH" >Control</th>
+          <td colspan="3" class="align-middle">Software controlled</td> 
+        </tr>  
+        <tr>
+          <th class="align-middle Bg-TH" >Number</th>
+          <td colspan="3" class="align-middle">4</td> 
+        </tr>          
+        <tr>
+          <th class="align-middle Bg-TH" >Maximum Voltage in open mode</th>
+          <td class="align-middle">Electro Mechanic</td> 
+          <td colspan="3" class="align-middle">750 V(Rms)</td> 
+        </tr>          
+        <tr>
+          <th rowspan="2" class="align-middle Bg-TH" >Break Capacity AC</th>
+          <td rowspan="2" class="align-middle">Electro Mechanic</td> 
+          <td class="align-middle">Imax</td> 
+          <td class="align-middle">10 A(Rms)</td> 
+        </tr>   
+        <tr>
+          <td class="align-middle">Vmax</td> 
+          <td class="align-middle">250 V(Rms)</td> 
+        </tr> 
+        <tr>
+          <th rowspan="2" class="align-middle Bg-TH" >Break Capacity DC</th>
+          <td rowspan="2" class="align-middle">Electro Mechanic</td> 
+          <td class="align-middle">Imax</td> 
+          <td class="align-middle">10 A(Peak)</td> 
+        </tr>  
+        <tr>
+          <td class="align-middle">Vmax</td> 
+          <td class="align-middle">30 V(Peak)</td> 
+        </tr> 
+        <tr>
+          <th rowspan="1" class="align-middle Bg-TH" >Break Capacity DC</th>
+          <td rowspan="1" class="align-middle">Electro Mechanic</td> 
+          <td class="align-middle">Imax</td> 
+          <td class="align-middle">10 A(Peak)</td> 
+        </tr>  
+
+        <tr>
+          <th class="align-middle Bg-TH" >Galvanic Isolation</th>
+          <td colspan="3" class="align-middle">4 Group (1+1+1+1)</td> 
+        </tr> 
+        <tr>
+          <th class="align-middle Bg-TH" >LED</th>
+          <td colspan="3" class="align-middle">Green (1 Color)</td> 
+        </tr>  
+        
+
+      </tbody>
+    </table>
+    <!-- Tables CombinationCable-->  
+    <table id="CombinationCable_Table" class="overflow-scroll table table-sm text-center  table-responsive d-none   table-hover table-data border-dark-subtle">
+          <tbody>
+            <tr>
+              <th colspan="4" class="text-center header-color  text-light"><h5>Combination Cable<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+            </tr>
+            <tr>
+              <th class="align-middle Bg-TH" >3 Voltage, 3 current</th>
+              <td class="align-middle">Yes</td> 
+            </tr>            
+            <tr>
+              <th class="align-middle Bg-TH" >6 Current</th>
+              <td colspan="3" class="align-middle">Yes</td> 
+            </tr>              
+
+          </tbody>
+    </table>
+    <!-- Tables GPS-->  
+    <table id="GPS_Table"class="overflow-scroll table table-sm text-center table-responsive d-none  table-hover table-data border-dark-subtle">
+    <tbody>
+      <tr>
+        <th colspan="4" class="text-center header-color text-light"><h5>GPS<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+      </tr>
+      <tr>
+        <th class="align-middle Bg-TH" >Internal GPS Module</th>
+        <td class="align-middle">Yes</td> 
+      </tr>            
+      <tr>
+        <th class="align-middle Bg-TH" >Accyracy</th>
+        <td colspan="3" class="align-middle">8ns</td> 
+      </tr>    
+      <tr>
+        <th class="align-middle Bg-TH" >Time To Lock</th>
+        <td colspan="3" class="align-middle">10s</td> 
+      </tr>   
+      <tr>
+        <th class="align-middle Bg-TH" >Delay Adjusment</th>
+        <td colspan="3" class="align-middle">yes</td> 
+      </tr>     
+    </tbody>
+    </table>
+    <!-- Tables PCconnection-->  
+    <table id="PCconnection_Table" class="overflow-scroll table table-sm text-center table-responsive table-data d-none border-dark-subtle">
+    <tbody>
+    <tr>
+      <th colspan="4" class="text-center header-color  text-light"><h5>PC connection<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+    </tr>
+    <tr>
+      <th class="align-middle Bg-TH" >Wifi</th>
+      <td colspan="3"class="align-middle">Yes</td> 
+    </tr>            
+    <tr>
+      <th class="align-middle Bg-TH" >LAN</th>
+      <td colspan="3" class="align-middle">1 Port</td> 
+    </tr>    
+    <tr>
+      <th class="align-middle Bg-TH" >Programming USB port</th>
+      <td colspan="3" class="align-middle">No</td> 
+    </tr>        
+    </tbody>
+    </table>
+    <!-- Tables Powersupply-->  
+    <table id="Powersupply_Table" class="overflow-scroll table table-sm text-center table-responsive table-data d-none border-dark-subtle">
+  <tbody>
+    <tr>
+      <th colspan="4" class=" text-center header-color  text-light"><h5>Power supply<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+    </tr>
+    <tr>
+      <th class="align-middle Bg-TH" >Power supply range</th>
+      <td colspan="3"class="align-middle">85-250 VAC or 100-330VDC</td> 
+    </tr>            
+    <tr>
+      <th class="align-middle Bg-TH" >Input frequency range</th>
+      <td colspan="3" class="align-middle">0-100 Hz</td> 
+    </tr>    
+    <tr>
+      <th class="align-middle Bg-TH" >Consuption</th>
+      <td colspan="3" class="align-middle">up to 2 kVA</td> 
+    </tr> 
+    <tr>
+      <th class="align-middle Bg-TH" >Nominal current</th>
+      <td colspan="3" class="align-middle">3 A at 230 VAC</td> 
+    </tr> 
+    <tr>
+      <th class="align-middle Bg-TH" >Connection</th>
+      <td colspan="3" class="align-middle">According to IEC60320</td> 
+    </tr> 
+  </tbody>
+    </table>
+    <!-- Tables PhysicalCharacteristic--> 
+    <table id="PhysicalCharacteristic_Table" class= "overflow-scroll table table-sm text-center table-responsive table-data d-none border-dark-subtle">
+  <tbody>
+    <tr>
+      <th colspan="4" class="text-center header-color  text-light"><h5>Physical Characteristic<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button></h5></th>
+    </tr>
+    <tr>
+      <th class="align-middle Bg-TH" >Weight</th>
+      <td colspan="3"class="align-middle">13kg</td> 
+    </tr>            
+    <tr>
+      <th class="align-middle Bg-TH" >Dimension</th>
+      <td colspan="3" class="align-middle">35cm*35cm*15cm</td> 
+    </tr>    
+  </tbody>
+    </table>
+</body>
+<!-- Loads <model-viewer> for browsers: -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+<script>
+
+  var Model_Viewer = document.querySelector("#AMT105");
+  function getOribit() {
+    var date_orbit = Model_Viewer.cameraOrbit();
+    console.log(data_orbit.tostring())
+  }
+  $(".btn-sub").click(function (e) {
+    $("Hotspot").addClass("Hotspot_" + id);
+    $(".table").addClass("d-none");
+    $(".sub_Detailes").addClass("sub_Detailes")
+    if ($(".btn-sub").hasClass("Select")) {
+      $(".btn-sub").removeClass("Select");
+    }
+    if (!$(".Hotspot_Front_AMT105").hasClass("d-none")) {
+      $(".Hotspot").addClass("d-none");
+    }
+    if (!$(".Hotspot_Back_AMT105").hasClass("d-none")) {
+      $(".Hotspot_Back_AMT105").addClass("d-none");
+    }
+    if (!$(".Hotspot_Physical_AMT105").hasClass("d-none")) {
+      $(".Hotspot_Physical_AMT105").addClass("d-none");
+    }
+    var Orbit_Sub = $(this).attr("data_orbit");
+    var id = $(this).attr("id");
+    $(this).addClass("Select");
+    $(".Hotspot_" + id).removeClass("d-none");
+    Model_Viewer.cameraOrbit = Orbit_Sub;
+  
+    if(window.screen.width<="1000"){
+        $(".menu_list").addClass("d-none");
+        
+      }
+  });
+  
+  $(".Hotspot").click(function (e) {
+    var data_orbit=$(this).attr("data_orbit");
+    $(".table").addClass("d-none");
+    $(".HotspotAnnotation").addClass("d-none");
+    var child_hotspot=$(this).children()
+
+    if ($(child_hotspot).hasClass("d-none")) {
+      Model_Viewer.cameraOrbit = data_orbit;
+      $(child_hotspot).removeClass("d-none")
+      var Table_Id=$(this).attr("id");
+      setTimeout(()=> {
+        $("#"+Table_Id+"_Table").removeClass("d-none")
+        if(window.screen.width<="1000"){
+        $("#"+Table_Id+"_Table").removeClass("table-data")
+      }
+      }
+      ,800);
+    }
+  });
+  $(".Hotspot").focusout(function (e){
+   
+    $(".table").addClass("d-none");
+    $(".HotspotAnnotation").addClass("d-none");
+    var sideselected=$(this).attr("Side");
+  switch (sideselected){
+    case "Front":
+     Model_Viewer.cameraOrbit="0.0rad 1.35rad 315m"
+      break;
+
+    case "Back":
+    Model_Viewer.cameraOrbit="3.15rad 1.45rad 315m"
+        break;
+
+    case "Physical":
+    Model_Viewer.cameraOrbit="0.5rad 1.25rad 315m"
+        break;    
+  }
+    
+  });
+
+$(".close").click(function(e){
+var table = $( this ).offsetParent()
+if(!$(table).hasClass("d-none")){
+  table.addClass("d-none");
+  var point_id=$( table ).attr("Id");
+  var point_class_setect=point_id.split("_");
+  var sideselected=$("#"+ point_class_setect[0]).attr("Side")
+  $(".HotspotAnnotation").addClass("d-none");
+  switch (sideselected){
+    case "Front":
+     Model_Viewer.cameraOrbit="0.0rad 1.35rad 315m"
+      break;
+
+    case "Back":
+    Model_Viewer.cameraOrbit="3.15rad 1.45rad 315m"
+        break;
+
+    case "Physical":
+    Model_Viewer.cameraOrbit="0.5rad 1.25rad 315m"
+        break;    
+  }
+}
+
+});
+  function SetOrbit(orbit) {
+    Model_Viewer.cameraOrbit = orbit;
+    $("#Date_Text").addClass("display-None")
+    if ($("#Date_Text").hasClass("display-None")) {
+      $("#Date_Text").addClass("display-Block");
+      $("#Date_Text").removeClass("display-None");
+    }
+  }
+  $("#CameraControl").change(function (e) { 
+    checkBox = document.getElementById("CameraControl");
+    model=Model_Viewer;
+    if(checkBox.checked ){
+      Model_Viewer.cameracontrols=true;
+      Model_Viewer.cameraControls=true;
+    }else{
+      Model_Viewer.___cameraControls=false;
+      Model_Viewer.cameraControls=false
+
+    }
+  });
+
+$("#Menu").on("click", function () {
+  $(".menu_list").addClass("Show_Responsiv");
+  $(".menu_list").removeClass("d-none");
+  $("#Menu").css("display","none !important");
+});
+
+$("#close_menu").on("click", function () {
+  $(".menu_list").addClass("d-none");
+});
+
+$(document).ready(function () {
+  checkBox = document.getElementById("CameraControl");
+    model=Model_Viewer;
+    if(checkBox.checked ){
+      Model_Viewer.cameracontrols=true;
+      Model_Viewer.cameraControls=true;
+    }else{
+      Model_Viewer.___cameraControls=false;
+      Model_Viewer.cameraControls=false
+    }
+});
+</script><script src="Assets/JS/Coustom_script.js"></script>
+</html>
