@@ -356,3 +356,7 @@ td{
   font-size: 14px !important;
   font-weight: 600 !important;
 }
+.justyfiy{
+  text-align: justify;
+  text-justify: inter-word;
+}
