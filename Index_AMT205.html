@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Vebko 3D Model</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="Assets/CSS/styles.css" rel="stylesheet" />
+  <link rel="icon" href="Assets/Image/Vebko_EN.ico" type="image/x-icon">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap-utilities.css">
+  <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap.css">
+  <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap-grid.css">
+  <script src="Assets/bootstrap-5.3.0/js/bootstrap.js"></script>
+  <script src="Assets/bootstrap-5.3.0/js/bootstrap.bundle.js"></script>
+  <script src="Assets/JS/jquery-3.6.3.js"></script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+  <!-- modelviewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+
+</head>
+
+<body>
+  <model-viewer id="Model_Tag" src="Assets/3D Models/AMT205.glb" ar-modes="webxr scene-viewer quick-look" ar
+    ios-src="Assets/3D Models/AMT105.glb" alt="AMT105" shadow-intensity="1" camera-orbit="-5deg 80deg 350.4m"
+    field-of-view="30deg" cameracontrols="false">
+
+    <button type="button" id="Menu" class="btn btn-outline-info btn-sm  btn_Menu">
+      <img style="padding-top:3px;padding-bottom:3px;" src="Assets/Image/hamburger.png" width="25px">
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+    <div class="menu_list p-3" style="z-index:10000000000;">
+      <select class="Font-Size form-select" id="category" aria-label="Default select example">
+        <option class="Font-Size" value="Offices">Offices and Agency</option>
+        <option class="Font-Size" value="AMT105" selected>Tester AMT105</option>
+        <option class="Font-Size" value="AMT205" selected>Tester AMT205</option>
+        <option class="Font-Size" value="Bassforinstrumenttests">Bass for instrument tests</option>
+        <option class="Font-Size" value="CalibrationmoduleforAMT105">Calibration module for AMT105</option>
+        <option class="Font-Size" value="CTandCVTTestModule">CT and CVT Test Module</option>
+        <option class="Font-Size" value="CBTestModule">CBTestModule</option>
+        <option class="Font-Size" value="TransformerTestModule">Transformer Test Module</option>
+      </select>
+      <div class="form-check mt-3 pl">
+        <input class="form-check-input " type="checkbox" value="" id="CameraControl">
+        <label class="form-check-label" for="CameraControl">
+          Camera Control
+        </label>
+      </div>
+      <button type="button" id="close_menu" class="btn btn-sub m-2 mt-1 display_none">Close Menu
+        <img class="float-start border-end border-2" src="Assets/Image/fast-forward-double-right-arrows-symbol.png">
+      </button>
+      <hr>
+      <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.0rad 1.35rad 315m" id="Front_AMT105"> Front Panel
+      </button>
+      <button type="button" class="btn btn-sub m-2 mt-0" data_orbit="3.15rad 1.45rad 315m" id="Back_AMT105"> Back Panel
+      </button>
+      <button type="button" class="btn btn-sub m-2 mt-0" data_orbit="0.5rad 1.25rad 315m" id="Physical_AMT105"> Physical
+      </button>
+    </div>
+    <!-- fornt panel point -->
+   <!-- fornt panel point -->
+   <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-1" id="highvoltagelowcurrentgenerators"
+   side="Front" data-position="-57.68086132755639m 23.30097031820263m 35.70456995525683m"
+   data-normal="-0.6079452635596718m 0.7939789395917902m 2.405329656149785e-7m" data-visibility-attribute="visible"
+   data_orbit='-0.1rad 1.3 200m'>
+   <div class="HotspotAnnotation d-none ">High Voltage, Low Current Generators</div>
+ </button>
+
+ <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-2" id="lowvoltagehighcurrentgenerators"
+   side="Front" data-position="-58.14170945510951m 10.966643985916157m 35.63155629094613m"
+   data-normal="-0.06221703576069141m 0.9980626435555344m 3.023593644024914e-7m" data-visibility-attribute="visible"
+   data_orbit='-0.2rad 1.1 200m'>
+   <div class="HotspotAnnotation d-none ">Low Voltage, High Current Generators</div>
+ </button>
+
+
+ <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-3" id="binaryoutputs" side="Front"
+   data-position="-6.000186669234289m 24.426750088839324m 37.94880523436419m"
+   data-normal="0m -3.0294627932906266e-7m 0.9999999999999543m" data-visibility-attribute="visible"
+   data_orbit='.3rad 1.3 200m'>
+   <div class="HotspotAnnotation d-none">Binary Outputs</div>
+ </button>
+
+ <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-4" id="auxdc" side="Front"
+   data-position="-28.02270380119159m 14.582161465057082m 37.89220680269486m"
+   data-normal="-0.12976305438446956m 0.9915450316131503m 3.003848781144355e-7m" data-visibility-attribute="visible"
+   data_orbit='0.2rad 0.3 200m'>
+   <div class="HotspotAnnotation d-none">Aux dc</div>
+ </button>
+
+ <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-5" id="acdccurrentmeasuringinput" side="Front"
+   data-position="20.793532754074388m 15.167832624117803m 36.34979588621031m"
+   data-normal="-0.0958922213117136m 0.99539108901707m -0.0011232975193003639m" data-visibility-attribute="visible"
+   data_orbit='0.2rad 1.3 200m'>
+   <div class="HotspotAnnotation d-none">AC/DC Current Measuring Input</div>
+ </button>
+
+ <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-13" id="acdcvoltagemeasuringinput" side="Front"
+   data-position="28.278771055069925m 19.322503374632703m 37.57545983660813m"
+   data-normal="0m -1.343588610839583e-7m 0.9999999999999911m" data-visibility-attribute="visible"
+   data_orbit='0.2rad 1.3 200m'>
+   <div class="HotspotAnnotation d-none">AC/DC Voltage Measuring Input</div>
+ </button>
+
+ <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-6" id="combinationcable" side="Front"
+   data-position="-26.178595786663905m 3.4551312097956455m 37.521744103951136m"
+   data-normal="0.6140204287641016m 0.5350726609692585m 0.5802380205946744m" data-visibility-attribute="visible"
+   data_orbit='-0.3rad 1.3 200m'>
+   <div class="HotspotAnnotation d-none">Combination Cable</div>
+ </button>
+
+
+ <button class="Hotspot  Hotspot_Front_AMT105 d-none" slot="hotspot-7" id="acdcanalogbinaryinputs" side="Front"
+   data-position="-13.511327733400737m 4.713292823806977m 36.04720195111069m"
+   data-normal="0.12976603400269557m 0.9915446416673299m 1.3322280876832516e-7m" data-visibility-attribute="visible"
+   data_orbit='-0.1rad 1.3 200m'>
+   <div class="HotspotAnnotation d-none ">AC/DC Analog Binary Inputs</div>
+ </button>
+
+ <!-- back panel point -->
+ <button class="Hotspot  Hotspot_Back_AMT105 d-none" slot="hotspot-8" id="gps" side="Back"
+   data-position="-9.06674958791443m 19.775955936330643m -78.87659681594643m"
+   data-normal="0m 1.343588610839583e-7m -0.9999999999999911m" data-visibility-attribute="visible"
+   data_orbit="3.3rad 1.45rad -900m">
+   <div class="HotspotAnnotation d-none">GPS</div>
+ </button>
+
+ <button class="Hotspot Hotspot_Back_AMT105 d-none" slot="hotspot-9" id="pcconnection" side="Back"
+   data-position="-8.089237228066754m 0.568210272940906m -78.87659939667726m"
+   data-normal="0m 1.343588610839583e-7m -0.9999999999999911m" data-visibility-attribute="visible"
+   data_orbit="3.15rad 1.45rad 200m">
+   <div class="HotspotAnnotation d-none">PC connection</div>
+ </button>
+
+
+ <button class="Hotspot  Hotspot_Back_AMT105 d-none" slot="hotspot-10" id="powersupply" side="Back"
+   data-position="36.96057239531781m 1.610478221021706m -78.87659925663932m"
+   data-normal="0m 1.343588610839583e-7m -0.9999999999999911m" data-visibility-attribute="visible"
+   data_orbit="2.9rad 1.45rad 200m">
+   <div class="HotspotAnnotation d-none">Power supply</div>
+ </button>
+
+ <button class="Hotspot  Hotspot_Back_AMT105 d-none" slot="hotspot-11" id="protocol" side="Back"
+   data-position="-3.2854150448246173m 6.793784720721206m -78.8765985602162m"
+   data-normal="0m 1.343588610839583e-7m -0.9999999999999911m" data-visibility-attribute="visible"
+   data_orbit="2.9rad 1.45rad 200m">
+   <div class="HotspotAnnotation d-none">Protocol</div>
+ </button>
+ <!-- Physical point -->
+ <button class="Hotspot  Hotspot_Physical_AMT105 d-none" slot="hotspot-12" id="physicalcharacteristic"
+   side="Physical" data-surface="172 0 1465 1466 1467 0.503 0.223 0.273" data-visibility-attribute="visible"
+   data_orbit="0.5rad 1.25rad 315m">
+   <div class="HotspotAnnotation d-none">Physical Characteristic</div>
+ </button>
+
+  </model-viewer>
+
+  <div class="position-fixed top-0 right-0" id="ImageData">
+    <p class="bg-dark m-0"><button class="p-2 m-1 btn-close bg-danger text-dark fw-bolder"></button></P>
+    <img style="z-index:100000 !important;" src="" class="img-pos img-thumbnail" width="550px" id="img-tag">
+  </div>
+</body>
+<!-- Loads <model-viewer> for browsers: -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+<script>
+
+  var Model_Viewer = document.querySelector("#Model_Tag");
+  function getOribit() {
+    var date_orbit = Model_Viewer.cameraOrbit();
+    console.log(data_orbit.tostring())
+  }
+  $(".btn-sub").click(function (e) {
+    $("Hotspot").addClass("Hotspot_" + id);
+    $(".table").addClass("d-none");
+    $(".sub_Detailes").addClass("sub_Detailes")
+    if ($(".btn-sub").hasClass("Select")) {
+      $(".btn-sub").removeClass("Select");
+    }
+    if (!$(".Hotspot_Front_AMT105").hasClass("d-none")) {
+      $(".Hotspot").addClass("d-none");
+    }
+    if (!$(".Hotspot_Back_AMT105").hasClass("d-none")) {
+      $(".Hotspot_Back_AMT105").addClass("d-none");
+    }
+    if (!$(".Hotspot_Physical_AMT105").hasClass("d-none")) {
+      $(".Hotspot_Physical_AMT105").addClass("d-none");
+    }
+    var Orbit_Sub = $(this).attr("data_orbit");
+    var id = $(this).attr("id");
+    $(this).addClass("Select");
+    $(".Hotspot_" + id).removeClass("d-none");
+    Model_Viewer.cameraOrbit = Orbit_Sub;
+
+    if (window.screen.width <= "1000") {
+      $(".menu_list").addClass("d-none");
+
+    }
+  });
+
+  $(".Hotspot").click(function (e) {
+    var data_orbit = $(this).attr("data_orbit");
+    var file_name = $(this).attr("id")
+    $(".HotspotAnnotation").addClass("d-none");
+    var child_hotspot = $(this).children()
+    if ($(child_hotspot).hasClass("d-none")) {
+      Model_Viewer.cameraOrbit = data_orbit;
+      $(child_hotspot).removeClass("d-none")
+      $("#img-tag").attr("src", "Assets/Image/AMT205/" + file_name + ".jpg");
+      $("#ImageData").show("350");
+    }
+  });
+
+  $(".Hotspot").focusout(function (e) {
+
+    $("#ImageData").hide("150");
+    $(".HotspotAnnotation").addClass("d-none");
+    var sideselected = $(this).attr("Side");
+    switch (sideselected) {
+      case "Front":
+        Model_Viewer.cameraOrbit = "0.0rad 1.35rad 315m"
+        break;
+
+      case "Back":
+        Model_Viewer.cameraOrbit = "3.15rad 1.45rad 315m"
+        break;
+
+      case "Physical":
+        Model_Viewer.cameraOrbit = "0.5rad 1.25rad 315m"
+        break;
+    }
+
+  });
+
+  $(".close").click(function (e) {
+    var table = $(this).offsetParent()
+    if (!$(table).hasClass("d-none")) {
+      table.addClass("d-none");
+      var point_id = $(table).attr("Id");
+      var point_class_setect = point_id.split("_");
+      var sideselected = $("#" + point_class_setect[0]).attr("Side")
+      $(".HotspotAnnotation").addClass("d-none");
+      switch (sideselected) {
+        case "Front":
+          Model_Viewer.cameraOrbit = "0.0rad 1.35rad 315m"
+          break;
+
+        case "Back":
+          Model_Viewer.cameraOrbit = "3.15rad 1.45rad 315m"
+          break;
+
+        case "Physical":
+          Model_Viewer.cameraOrbit = "0.5rad 1.25rad 315m"
+          break;
+      }
+    }
+
+  });
+  function SetOrbit(orbit) {
+    Model_Viewer.cameraOrbit = orbit;
+    $("#Date_Text").addClass("display-None")
+    if ($("#Date_Text").hasClass("display-None")) {
+      $("#Date_Text").addClass("display-Block");
+      $("#Date_Text").removeClass("display-None");
+    }
+  }
+  $("#CameraControl").change(function (e) {
+    checkBox = document.getElementById("CameraControl");
+    model = Model_Viewer;
+    if (checkBox.checked) {
+      Model_Viewer.cameracontrols = true;
+      Model_Viewer.cameraControls = true;
+    } else {
+      Model_Viewer.___cameraControls = false;
+      Model_Viewer.cameraControls = false
+
+    }
+  });
+
+  $("#Menu").on("click", function () {
+    $(".menu_list").addClass("Show_Responsiv");
+    $(".menu_list").removeClass("d-none");
+    $("#Menu").css("display", "none !important");
+  });
+
+  $("#close_menu").on("click", function () {
+    $(".menu_list").addClass("d-none");
+  });
+
+  $(document).ready(function () {
+    checkBox = document.getElementById("CameraControl");
+    $("#ImageData").hide();
+    model = Model_Viewer;
+    if (checkBox.checked) {
+      Model_Viewer.cameracontrols = true;
+      Model_Viewer.cameraControls = true;
+    } else {
+      Model_Viewer.___cameraControls = false;
+      Model_Viewer.cameraControls = false
+    }
+  });
+</script>
+<script src="Assets/JS/Coustom_script.js"></script>
+<style>
+  .Flags {
+    max-width: 40px;
+  }
+
+
+
+  @media screen and (max-height: 800px) {
+    .list_div {
+      height: 68% !important;
+    }
+
+    .Flags {
+      max-width: 30px;
+
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    #ImageData {
+      width: 70%;
+    }
+
+    #img-tag {
+      width: 100%;
+    }
+  }
+</style>
+
+</html>
