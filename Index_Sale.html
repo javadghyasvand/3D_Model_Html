@@ -2,588 +2,544 @@
 <html lang="en">
 
 <head>
-  <title>Vebko 3D Model</title>
-  <meta charset="utf-8">
-  <meta name="description" content="&lt;model-viewer&gt; template">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" href="Assets/CSS/styles.css" rel="stylesheet" />
-  <link rel="icon" href="Assets/Image/Vebko_EN.ico" type="image/x-icon">
-  <!-- bootstrap -->
-  <link type="text/css" href="Assets/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <script src="Assets/bootstrap-5.3.0/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-    crossorigin="anonymous"></script>
-  <script src="Assets/JS/Coustom_script.js"></script>
-  <!-- modelviewer -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-  <link rel="stylesheet" href="Assets/bootstrap-4.0.0/css/bootstrap.css">
-  <script src="Assets/bootstrap-4.0.0/js/bootstrap.js"></script>
+    <title>Vebko 3D Model</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="Assets/CSS/styles.css" rel="stylesheet" />
+    <link rel="icon" href="Assets/Image/Vebko_EN.ico" type="image/x-icon">
+    <!-- bootstrap -->
+    <link type="text/css" href="Assets/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="Assets/bootstrap-5.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="Assets/JS/Coustom_script.js"></script>
+    <!-- modelviewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <link rel="stylesheet" href="Assets/bootstrap-4.0.0/css/bootstrap.css">
+    <script src="Assets/bootstrap-4.0.0/js/bootstrap.js"></script>
 </head>
 
 <body>
-  <model-viewer id="Model_Tag" src="Assets/3D Models/Earth.glb" ar-modes="webxr scene-viewer quick-look" ar
-    ios-src="Assets/3D Models/AMT105.glb" alt="Offices and Agency" shadow-intensity="1"
-    camera-orbit="18deg 80deg 350.4m" field-of-view="30deg" cameracontrols="false">
-    <!-- australia -->
-    <div class="Hotspot" slot="hotspot-1" id="australia" data-surface="0 0 88 89 145 0.372 0.140 0.488"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/australia.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- bahrain -->
-    <div class="Hotspot" slot="hotspot-2" id="bahrain"
-      data-position="29.11528605802829m 9.939521841140188m 32.63548536936477m"
-      data-normal="0.6077142993193945m 0.2892952111495323m 0.739588812252244m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/bahrain.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- brazil -->
-    <div class="Hotspot" slot="hotspot-3" id="brazil" data-surface="0 0 104 56 105 0.377 0.513 0.110"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/brazil.png">
-        <span class="badge bg-danger badge-danger Font-Size">47</span>
-      </div>
-    </div>
-    <!-- cameroon -->
-    <div class="Hotspot" slot="hotspot-4" id="cameroon"
-      data-position="1.050742991410388m -3.8183516900636763m 43.74286250007973m"
-      data-normal="0.09796775739669543m -0.09724710110690332m 0.9904268371954419m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/cameroon.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- croatia -->
-    <div class="Hotspot" slot="hotspot-5" id="croatia" data-surface="0 0 73 74 126 0.046 0.367 0.587"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/croatia.png">
-        <span class="badge bg-danger badge-danger Font-Size">23</span>
-      </div>
-    </div>
-    <!-- england -->
-    <div class="Hotspot" slot="hotspot-6" id="england" data-surface="0 0 185 125 186 0.207 0.772 0.021"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/england.png">
-        <span class="badge bg-danger badge-danger Font-Size">5</span>
-      </div>
-    </div>
-    <!-- india -->
-    <div class="Hotspot" slot="hotspot-7" id="india" data-surface="0 0 29 30 31 0.103 0.108 0.789"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/india.png">
-        <span class="badge bg-danger badge-danger Font-Size">10</span>
-      </div>
-    </div>
-    <!-- indonesia -->
-    <div class="Hotspot" slot="hotspot-8" id="indonesia" data-surface="0 0 40 36 41 0.102 0.139 0.759"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/indonesia.png">
-        <span class="badge bg-danger badge-danger Font-Size">16</span>
-      </div>
-    </div>
-    <!-- iran -->
-    <div class="Hotspot" slot="hotspot-26" id="iran"
-      data-position="31.132408913398194m 14.675946187316159m 29.129943221996502m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/OfficesandAgency/iran.png">
-        <span class="badge bg-danger badge-danger Font-Size">715</span>
-      </div>
-    </div>
+    <model-viewer id="Model_Tag" src="Assets/3D Models/Earth.glb" ar-modes="webxr scene-viewer quick-look" ar ios-src="Assets/3D Models/AMT105.glb" alt="Offices and Agency" shadow-intensity="1" camera-orbit="18deg 80deg 350.4m" field-of-view="30deg" cameracontrols="false">
+        <div class="loader text-center  z-3  ">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- australia -->
+        <div class="Hotspot" slot="hotspot-1" id="australia" data-surface="0 0 88 89 145 0.372 0.140 0.488" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/australia.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- bahrain -->
+        <div class="Hotspot" slot="hotspot-2" id="bahrain" data-position="29.11528605802829m 9.939521841140188m 32.63548536936477m" data-normal="0.6077142993193945m 0.2892952111495323m 0.739588812252244m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/bahrain.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- brazil -->
+        <div class="Hotspot" slot="hotspot-3" id="brazil" data-surface="0 0 104 56 105 0.377 0.513 0.110" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/brazil.png">
+                <span class="badge bg-danger badge-danger Font-Size">47</span>
+            </div>
+        </div>
+        <!-- cameroon -->
+        <div class="Hotspot" slot="hotspot-4" id="cameroon" data-position="1.050742991410388m -3.8183516900636763m 43.74286250007973m" data-normal="0.09796775739669543m -0.09724710110690332m 0.9904268371954419m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/cameroon.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- croatia -->
+        <div class="Hotspot" slot="hotspot-5" id="croatia" data-surface="0 0 73 74 126 0.046 0.367 0.587" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/croatia.png">
+                <span class="badge bg-danger badge-danger Font-Size">23</span>
+            </div>
+        </div>
+        <!-- england -->
+        <div class="Hotspot" slot="hotspot-6" id="england" data-surface="0 0 185 125 186 0.207 0.772 0.021" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/england.png">
+                <span class="badge bg-danger badge-danger Font-Size">5</span>
+            </div>
+        </div>
+        <!-- india -->
+        <div class="Hotspot" slot="hotspot-7" id="india" data-surface="0 0 29 30 31 0.103 0.108 0.789" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/india.png">
+                <span class="badge bg-danger badge-danger Font-Size">10</span>
+            </div>
+        </div>
+        <!-- indonesia -->
+        <div class="Hotspot" slot="hotspot-8" id="indonesia" data-surface="0 0 40 36 41 0.102 0.139 0.759" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/indonesia.png">
+                <span class="badge bg-danger badge-danger Font-Size">16</span>
+            </div>
+        </div>
+        <!-- iran -->
+        <div class="Hotspot" slot="hotspot-26" id="iran" data-position="31.132408913398194m 14.675946187316159m 29.129943221996502m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/OfficesandAgency/iran.png">
+                <span class="badge bg-danger badge-danger Font-Size">715</span>
+            </div>
+        </div>
 
-    <!-- iraq -->
-    <div class="Hotspot" slot="hotspot-9" id="iraq" data-surface="0 0 75 25 76 0.179 0.387 0.434"
-      data-normal="0.6072723475920008m 0.2886210414219591m 0.7402149622228695m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/iraq.png">
-        <span class="badge bg-danger badge-danger Font-Size">8</span>
-      </div>
-    </div>
-    <!-- jordan -->
-    <div class="Hotspot" slot="hotspot-10" id="jordan"
-      data-position="19.469909173671667m 13.35730652133491m 37.56458129736499m"
-      data-normal="0.4510487265113192m 0.28919285868228756m 0.8443474029093023m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/jordan.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- kenya -->
-    <div class="Hotspot" slot="hotspot-11" id="kenya"
-      data-position="20.37351333081169m -6.6535850578595905m 38.80462079981038m"
-      data-normal="0.4689507276360748m -0.09720247293084465m 0.8778592679386169m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/kenya.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- malaysia -->
-    <div class="Hotspot" slot="hotspot-12" id="malaysia"
-      data-position="46.80843749865863m -4.072353928793533m -2.9644561979541075m"
-      data-normal="0.990426845237311m -0.09724695770675473m -0.09796781844079434m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/malaysia.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- morocco -->
-    <div class="Hotspot" slot="hotspot-13" id="morocco" data-surface="0 0 15 17 71 0.294 0.221 0.485"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/morocco.png">
-        <span class="badge bg-danger badge-danger Font-Size">4</span>
-      </div>
-    </div>
-    <!-- nigeria -->
-    <div class="Hotspot" slot="hotspot-14" id="nigeria" data-surface="0 0 18 16 50 0.622 0.318 0.060"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/nigeria.png">
-        <span class="badge bg-danger badge-danger Font-Size">4</span>
-      </div>
-    </div>
-    <!-- philippines -->
-    <div class="Hotspot" slot="hotspot-15" id="philippines" data-surface="0 0 39 40 87 0.820 0.121 0.059"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/philippines.png">
-        <span class="badge bg-danger badge-danger Font-Size">3</span>
-      </div>
-    </div>
-    <!-- poland -->
-    <div class="Hotspot" slot="hotspot-16" id="poland"
-      data-position="5.715018120109075m 27.12735631932565m 34.8384979879401m"
-      data-normal="0.0754939216524895m 0.6321067872427131m 0.771194967122597m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/poland.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- romania -->
-    <div class="Hotspot" slot="hotspot-17" id="romania"
-      data-position="9.737375727029846m 23.42911315152142m 36.456707999874325m"
-      data-normal="0.25643374128352986m 0.46952027295784965m 0.8448623850148129m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/romania.png">
-        <span class="badge bg-danger badge-danger Font-Size">2</span>
-      </div>
-    </div>
-    <!-- russia -->
-    <div class="Hotspot" slot="hotspot-18" id="russia"
-      data-position="16.752339144653m 29.579225253045763m 29.256763455477945m"
-      data-normal="0.365138873245019m 0.6323247569410525m 0.6832561781680404m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/russia.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- singapore -->
-    <div class="Hotspot" slot="hotspot-19" id="singapore"
-      data-position="46.47651254116697m -5.90014645035831m -4.505779959837056m"
-      data-normal="0.990426845237311m -0.09724695770675473m -0.09796781844079434m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/singapore.png">
-        <span class="badge bg-danger badge-danger Font-Size">5</span>
-      </div>
-    </div>
-    <!-- south-africa -->
-    <div class="Hotspot" slot="hotspot-20" id="south-africa" data-surface="0 0 154 98 155 0.120 0.093 0.787"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/south-africa.png">
-        <span class="badge bg-danger badge-danger Font-Size">5</span>
-      </div>
-    </div>
-    <!-- sweden -->
-    <div class="Hotspot" slot="hotspot-21" id="sweden"
-      data-position="2.924172528338712m 34.405755269445606m 28.609904669211296m"
-      data-normal="0.06270683236300964m 0.7718798944485219m 0.6326683821095662m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/sweden.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- tanzania -->
-    <div class="Hotspot" slot="hotspot-22" id="tanzania"
-      data-position="18.26171997190562m -11.115589168883806m 38.97772840287493m"
-      data-normal="0.451184426949721m -0.28918887144905536m 0.8442762637360318m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/tanzania.png">
-        <span class="badge bg-danger badge-danger Font-Size">2</span>
-      </div>
-    </div>
-    <!-- thailand -->
-    <div class="Hotspot" slot="hotspot-23" id="thailand" data-surface="0 0 33 34 35 0.028 0.631 0.341"
-      data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/thailand.png">
-        <span class="badge bg-danger badge-danger Font-Size">2</span>
-      </div>
-    </div>
-    <!-- unitedarabemirates -->
-    <div class="Hotspot" slot="hotspot-24" id="unitedarabemirates"
-      data-position="31.481339689864484m 8.250693914508979m 31.120982198544294m"
-      data-normal="0.6317943785244251m 0.09817065596745787m 0.7688942616328038m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/unitedarabemirates.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
-    <!-- vietnam -->
-    <div class="Hotspot" slot="hotspot-25" id="vietnam"
-      data-position="46.46015140501659m 2.5673805700594925m -8.019926214556437m"
-      data-normal="0.9904847998129744m 0.09731358186021209m -0.09731355571033154m" data-visibility-attribute="visible">
-      <div class="HotspotAnnotation">
-        <img class="Flags" src="Assets/Image/Sales/vietnam.png">
-        <span class="badge bg-danger badge-danger Font-Size">1</span>
-      </div>
-    </div>
+        <!-- iraq -->
+        <div class="Hotspot" slot="hotspot-9" id="iraq" data-surface="0 0 75 25 76 0.179 0.387 0.434" data-normal="0.6072723475920008m 0.2886210414219591m 0.7402149622228695m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/iraq.png">
+                <span class="badge bg-danger badge-danger Font-Size">8</span>
+            </div>
+        </div>
+        <!-- jordan -->
+        <div class="Hotspot" slot="hotspot-10" id="jordan" data-position="19.469909173671667m 13.35730652133491m 37.56458129736499m" data-normal="0.4510487265113192m 0.28919285868228756m 0.8443474029093023m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/jordan.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- kenya -->
+        <div class="Hotspot" slot="hotspot-11" id="kenya" data-position="20.37351333081169m -6.6535850578595905m 38.80462079981038m" data-normal="0.4689507276360748m -0.09720247293084465m 0.8778592679386169m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/kenya.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- malaysia -->
+        <div class="Hotspot" slot="hotspot-12" id="malaysia" data-position="46.80843749865863m -4.072353928793533m -2.9644561979541075m" data-normal="0.990426845237311m -0.09724695770675473m -0.09796781844079434m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/malaysia.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- morocco -->
+        <div class="Hotspot" slot="hotspot-13" id="morocco" data-surface="0 0 15 17 71 0.294 0.221 0.485" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/morocco.png">
+                <span class="badge bg-danger badge-danger Font-Size">4</span>
+            </div>
+        </div>
+        <!-- nigeria -->
+        <div class="Hotspot" slot="hotspot-14" id="nigeria" data-surface="0 0 18 16 50 0.622 0.318 0.060" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/nigeria.png">
+                <span class="badge bg-danger badge-danger Font-Size">4</span>
+            </div>
+        </div>
+        <!-- philippines -->
+        <div class="Hotspot" slot="hotspot-15" id="philippines" data-surface="0 0 39 40 87 0.820 0.121 0.059" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/philippines.png">
+                <span class="badge bg-danger badge-danger Font-Size">3</span>
+            </div>
+        </div>
+        <!-- poland -->
+        <div class="Hotspot" slot="hotspot-16" id="poland" data-position="5.715018120109075m 27.12735631932565m 34.8384979879401m" data-normal="0.0754939216524895m 0.6321067872427131m 0.771194967122597m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/poland.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- romania -->
+        <div class="Hotspot" slot="hotspot-17" id="romania" data-position="9.737375727029846m 23.42911315152142m 36.456707999874325m" data-normal="0.25643374128352986m 0.46952027295784965m 0.8448623850148129m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/romania.png">
+                <span class="badge bg-danger badge-danger Font-Size">2</span>
+            </div>
+        </div>
+        <!-- russia -->
+        <div class="Hotspot" slot="hotspot-18" id="russia" data-position="16.752339144653m 29.579225253045763m 29.256763455477945m" data-normal="0.365138873245019m 0.6323247569410525m 0.6832561781680404m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/russia.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- singapore -->
+        <div class="Hotspot" slot="hotspot-19" id="singapore" data-position="46.47651254116697m -5.90014645035831m -4.505779959837056m" data-normal="0.990426845237311m -0.09724695770675473m -0.09796781844079434m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/singapore.png">
+                <span class="badge bg-danger badge-danger Font-Size">5</span>
+            </div>
+        </div>
+        <!-- south-africa -->
+        <div class="Hotspot" slot="hotspot-20" id="south-africa" data-surface="0 0 154 98 155 0.120 0.093 0.787" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/south-africa.png">
+                <span class="badge bg-danger badge-danger Font-Size">5</span>
+            </div>
+        </div>
+        <!-- sweden -->
+        <div class="Hotspot" slot="hotspot-21" id="sweden" data-position="2.924172528338712m 34.405755269445606m 28.609904669211296m" data-normal="0.06270683236300964m 0.7718798944485219m 0.6326683821095662m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/sweden.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- tanzania -->
+        <div class="Hotspot" slot="hotspot-22" id="tanzania" data-position="18.26171997190562m -11.115589168883806m 38.97772840287493m" data-normal="0.451184426949721m -0.28918887144905536m 0.8442762637360318m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/tanzania.png">
+                <span class="badge bg-danger badge-danger Font-Size">2</span>
+            </div>
+        </div>
+        <!-- thailand -->
+        <div class="Hotspot" slot="hotspot-23" id="thailand" data-surface="0 0 33 34 35 0.028 0.631 0.341" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/thailand.png">
+                <span class="badge bg-danger badge-danger Font-Size">2</span>
+            </div>
+        </div>
+        <!-- unitedarabemirates -->
+        <div class="Hotspot" slot="hotspot-24" id="unitedarabemirates" data-position="31.481339689864484m 8.250693914508979m 31.120982198544294m" data-normal="0.6317943785244251m 0.09817065596745787m 0.7688942616328038m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/unitedarabemirates.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
+        <!-- vietnam -->
+        <div class="Hotspot" slot="hotspot-25" id="vietnam" data-position="46.46015140501659m 2.5673805700594925m -8.019926214556437m" data-normal="0.9904847998129744m 0.09731358186021209m -0.09731355571033154m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">
+                <img class="Flags" src="Assets/Image/Sales/vietnam.png">
+                <span class="badge bg-danger badge-danger Font-Size">1</span>
+            </div>
+        </div>
 
 
-    <button type="button" id="Menu" class="btn btn-outline-info btn-sm  btn_Menu">
+        <button type="button" id="Menu" class="btn btn-outline-info btn-sm  btn_Menu">
       <img style="padding-top:3px;padding-bottom:3px;" src="Assets/Image/hamburger.png" width="25px">
     </button>
 
 
 
-    <div class="progress-bar hide" slot="progress-bar">
+        <div class="progress-bar hide" slot="progress-bar">
 
 
-      <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
+            <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
       View in your space
     </button>
-    <div class="menu_list p-3">
-      <select class="Font-Size form-select" id="category" aria-label="Default select example">
+        <div class="menu_list p-3">
+            <select class="Font-Size form-select" id="category" aria-label="Default select example">
         <option class="Font-Size" value="AMT105">AMT105</option>
         <option class="Font-Size" value="AMT205">AMT205</option>
         <option class="Font-Size" value="Sale" selected>Sale</option>
         <option class="Font-Size" value="Offices">Offices and Agency</option>
         <option class="Font-Size" value="Bassforinstrumenttests">Bass for instrument tests</option>
         <option class="Font-Size" value="CalibrationmoduleforAMT105">Calibration module for AMT105</option>
-        <option class="Font-Size" value="CBTestModule">CB Test Module</option>
+        <!-- <option class="Font-Size" value="CBTestModule">CB Test Module</option> -->
         <option class="Font-Size" value="CTandCVTTestModule">CT and CVT Test Module</option>
         <option class="Font-Size" value="TransformerTestModule">Transformer Test Module</option>
       </select>
-      <div class="form-check mt-3 pl">
-        <input class="form-check-input " type="checkbox" value="" id="CameraControl">
-        <label class="form-check-label" for="CameraControl">
+            <div class="form-check mt-3 pl">
+                <input class="form-check-input " type="checkbox" value="" id="CameraControl">
+                <label class="form-check-label" for="CameraControl">
           Camera Control
         </label>
-      </div>
-      <button type="button" id="close_menu" class="btn btn-sub m-2 mt-1 display_none">Close Menu
+            </div>
+            <button type="button" id="close_menu" class="btn btn-sub m-2 mt-1 display_none">Close Menu
         <img class="float-start border-end border-2" src="Assets/Image/fast-forward-double-right-arrows-symbol.png">
       </button>
-      <hr>
-      <p class="fw-bolder text-center">Seles</p>
-      <hr>
-      <div class="overflow-y-scroll overflow-x-hidden pe-1 list_div" style="height:75%">
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="2.2rad 2rad 100m" id="Australia">
+            <hr>
+            <p class="fw-bolder text-center">Seles</p>
+            <hr>
+            <div class="overflow-y-scroll overflow-x-hidden pe-1 list_div" style="height:75%">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="2.2rad 2rad 100m" id="Australia">
           <span class=" align-middle fw-bolder">
             Australia
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/australia.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="5.2rad 2rad 100m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="5.2rad 2rad 100m">
           <span class=" align-middle fw-bolder">
             Brazil
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/brazil.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.1rad 1.15rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.1rad 1.15rad 0m">
           <span class="align-middle fw-bolder">
             Croatia
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/croatia.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="-0.3rad 1.05rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="-0.3rad 1.05rad 0m">
           <span class="align-middle fw-bolder">
             England
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/england.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.2rad 1.35rad 015m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.2rad 1.35rad 015m">
           <span class="align-middle fw-bolder">
             India
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/india.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.7rad 1.85rad 015m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.7rad 1.85rad 015m">
           <span class="align-middle fw-bolder">
             Indonesia
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/indonesia.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.9rad 1.175rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.9rad 1.175rad 0m">
           <span class="align-middle fw-bolder">
             Iran
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/OfficesandAgency/iran.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.5rad 1.175rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.5rad 1.175rad 0m">
           <span class="align-middle fw-bolder">
             Iraq
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/iraq.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="5.9rad 1.175rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="5.9rad 1.175rad 0m">
           <span class="align-middle fw-bolder">
             Morocco
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/morocco.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="6.3rad 1.5rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="6.3rad 1.5rad 0m">
           <span class="align-middle fw-bolder">
             Nigeria
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/nigeria.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.9rad 1.7rad 015m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.9rad 1.7rad 015m">
           <span class="align-middle fw-bolder">
             Philippines
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/philippines.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="6.3rad 2.2rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="6.3rad 2.2rad 0m">
           <span class="align-middle fw-bolder">
             South Africa
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/south-africa.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.7rad 1.6rad 015m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.7rad 1.6rad 015m">
           <span class="align-middle fw-bolder">
             Thailand
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/thailand.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.6rad 1.60rad 020m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.6rad 1.60rad 020m">
           <span class="align-middle fw-bolder">
             Malaysia
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/malaysia.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.7rad 1.275rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.7rad 1.275rad 0m">
           <span class="align-middle fw-bolder">
             United Arab Emirates
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/unitedarabemirates.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.7rad 1.275rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.7rad 1.275rad 0m">
           <span class="align-middle fw-bolder">
             Bahrain
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/bahrain.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.5rad 1.275rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.5rad 1.275rad 0m">
           <span class="align-middle fw-bolder">
             Jordan
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/jordan.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.5rad 1.675rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.5rad 1.675rad 0m">
           <span class="align-middle fw-bolder">
             Singapore
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/singapore.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.5rad 1.875rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.5rad 1.875rad 0m">
           <span class="align-middle fw-bolder">
             Tanzania
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/tanzania.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.1rad 0.875rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.1rad 0.875rad 0m">
           <span class="align-middle fw-bolder">
             Sweden
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/sweden.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.1rad 1.675rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.1rad 1.675rad 0m">
           <span class="align-middle fw-bolder">
             Cameroon
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/cameroon.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.5rad 1.075rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.5rad 1.075rad 0m">
           <span class="align-middle fw-bolder">
             Romania
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/romania.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.7rad 1.075rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.7rad 1.075rad 0m">
           <span class="align-middle fw-bolder">
             Russia
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/russia.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.8rad 1.35rad 015m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="1.8rad 1.35rad 015m">
           <span class="align-middle fw-bolder">
             Vietnam
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/vietnam.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.7rad 1.575rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.7rad 1.575rad 0m">
           <span class="align-middle fw-bolder">
             Kenya
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/kenya.png">
         </button>
-        <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="-0.3rad 1.05rad 0m">
+                <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="-0.3rad 1.05rad 0m">
           <span class="align-middle fw-bolder">
             Poland
           </span>
           <img class="float-end" style="max-width: 40px;" src="Assets/Image/Sales/poland.png">
         </button>
 
-      </div>
-    </div>
+            </div>
+        </div>
 
-  </model-viewer>
-  <div class="position-fixed top-0 right-0" id="ImageData">
-    <p class="bg-dark m-0"><button class="p-2 m-1 btn-close bg-danger text-dark fw-bolder"></button></P>
-    <img style="z-index:100000 !important;" src="" class="img-pos" width="400px" id="img-tag">
-  </div>
+    </model-viewer>
+    <div class="position-fixed top-0 right-0" id="ImageData">
+        <p class="bg-dark m-0"><button class="p-2 m-1 btn-close bg-danger text-dark fw-bolder "></button></P>
+        <img style="z-index:100000 !important;" src="" class="img-pos img-thumbnail" width="400px" id="img-tag">
+    </div>
 </body>
 <!-- Loads <model-viewer> for browsers: -->
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
 <script>
+    var Model_Viewer = document.querySelector("#Model_Tag");
 
-  var Model_Viewer = document.querySelector("#Model_Tag");
-  function getOribit() {
-    var date_orbit = Model_Viewer.cameraOrbit();
-    console.log(data_orbit.tostring())
-  }
-  $(".btn-sub").click(function (e) {
-    var Orbit_Sub = $(this).attr("data_orbit");
-    var taglist = $(this).children();
-    Model_Viewer.cameraOrbit = Orbit_Sub;
-    var src = $(taglist[1]).attr("src")
-    dataOrbit(src);
-  });
-
-  $(".btn-sub").focusout(function (e) {
-    $(".Hotspot").show('150');
-    $("#ImageData").hide("150");
-  });
-
-  function dataOrbit(taglist) {
-    if (window.screen.width <= "1000") {
-      $(".menu_list").addClass("d-none");
+    function getOribit() {
+        var date_orbit = Model_Viewer.cameraOrbit();
+        console.log(data_orbit.tostring())
     }
-    id = taglist.split("/");
-    var test = id[3].replace(".png", "");
-    $(".Hotspot").hide('150');
-
-
-    setTimeout(() => {
-      $("#img-tag").attr("src", taglist.replace(".png", ".jpg"));
-      $('#' + test).show("150");
-      $("#ImageData").show("150");
-    }, 900);
-  }
-
-  if (window.screen.width >= "1000") {
-    $(".btn-sub").focusout(function (e) {
-      Model_Viewer.cameraOrbit = "18deg 80deg 350.4m";
-      setTimeout(() => {
-        $("#ImageData").hide("150");
-      }, 800)
+    $(".btn-sub").click(function(e) {
+        var Orbit_Sub = $(this).attr("data_orbit");
+        var taglist = $(this).children();
+        Model_Viewer.cameraOrbit = Orbit_Sub;
+        var src = $(taglist[1]).attr("src")
+        dataOrbit(src);
     });
-  }
-  $("#Menu").on("click", function () {
 
-    if (window.screen.width <= "1000") {
-      $(".menu_list").addClass("Show_Responsiv");
-      $(".menu_list").removeClass("d-none");
-      $("#Menu").css("display", "none !important");
-      $("#ImageData").hide("150");
+    $(".btn-sub").focusout(function(e) {
+        $(".Hotspot").show('150');
+        $("#ImageData").hide("150");
+    });
 
-    } else {
-      $(".menu_list").addClass("Show_Responsiv");
-      $(".menu_list").removeClass("d-none");
-      $("#Menu").css("display", "none !important");
+    function dataOrbit(taglist) {
+        if (window.screen.width <= "1000") {
+            $(".menu_list").addClass("d-none");
+        }
+        id = taglist.split("/");
+        var test = id[3].replace(".png", "");
+        $(".Hotspot").hide('150');
+
+
+        setTimeout(() => {
+            $("#img-tag").attr("src", taglist.replace(".png", ".jpg"));
+            $('#' + test).show("150");
+            $("#ImageData").show("150");
+        }, 900);
     }
 
-  });
-  $(".btn-close").on("click", function () {
-    setTimeout(() => {
-      $("#ImageData").hide("150");
-      $(".Hotspot").show("150");
-    }, 400)
-  });
-
-  $("#close_menu").on("click", function () {
-    $(".menu_list").addClass("d-none");
-  });
-  $(document).ready(function () {
-    checkBox = document.getElementById("CameraControl");
-    $("#ImageData").hide("slow");
-    model = Model_Viewer;
-    if (checkBox.checked) {
-      Model_Viewer.cameracontrols = true;
-      Model_Viewer.cameraControls = true;
-    } else {
-      Model_Viewer.___cameraControls = false;
-      Model_Viewer.cameraControls = false
-
+    if (window.screen.width >= "1000") {
+        $(".btn-sub").focusout(function(e) {
+            Model_Viewer.cameraOrbit = "18deg 80deg 350.4m";
+            setTimeout(() => {
+                $("#ImageData").hide("150");
+            }, 800)
+        });
     }
-  });
-  $("#CameraControl").change(function (e) {
-    checkBox = document.getElementById("CameraControl");
-    model = Model_Viewer;
-    if (checkBox.checked) {
-      Model_Viewer.cameracontrols = true;
-      Model_Viewer.cameraControls = true;
-    } else {
-      Model_Viewer.___cameraControls = false;
-      Model_Viewer.cameraControls = false
+    $("#Menu").on("click", function() {
 
-    }
-  });
+        if (window.screen.width <= "1000") {
+            $(".menu_list").addClass("Show_Responsiv");
+            $(".menu_list").removeClass("d-none");
+            $("#Menu").css("display", "none !important");
+            $("#ImageData").hide("150");
 
+        } else {
+            $(".menu_list").addClass("Show_Responsiv");
+            $(".menu_list").removeClass("d-none");
+            $("#Menu").css("display", "none !important");
+        }
 
+    });
+    $(".btn-close").on("click", function() {
+        setTimeout(() => {
+            $("#ImageData").hide("150");
+            $(".Hotspot").show("150");
+        }, 400)
+    });
+
+    $("#close_menu").on("click", function() {
+        $(".menu_list").addClass("d-none");
+    });
+    $(document).ready(function() {
+        checkBox = document.getElementById("CameraControl");
+        $("#ImageData").hide("slow");
+        model = Model_Viewer;
+        if (checkBox.checked) {
+            Model_Viewer.cameracontrols = true;
+            Model_Viewer.cameraControls = true;
+        } else {
+            Model_Viewer.___cameraControls = false;
+            Model_Viewer.cameraControls = false
+
+        }
+    });
+    $("#CameraControl").change(function(e) {
+        checkBox = document.getElementById("CameraControl");
+        model = Model_Viewer;
+        if (checkBox.checked) {
+            Model_Viewer.cameracontrols = true;
+            Model_Viewer.cameraControls = true;
+        } else {
+            Model_Viewer.___cameraControls = false;
+            Model_Viewer.cameraControls = false
+
+        }
+    });
 </script>
 <style>
-  .Flags {
-    max-width: 40px;
-  }
-
-  @media screen and (max-height: 800px) {
-    .list_div {
-      height: 68% !important;
-    }
-
     .Flags {
-      max-width: 30px;
-
+        max-width: 40px;
     }
-  }
-
-  @media screen and (max-width: 1000px) {
-    #ImageData {
-      width: 70%;
+    
+    @media screen and (max-height: 800px) {
+        .list_div {
+            height: 68% !important;
+        }
+        .Flags {
+            max-width: 30px;
+        }
     }
-
-    #img-tag {
-      width: 100%;
+    
+    @media screen and (max-width: 1000px) {
+        #ImageData {
+            width: 70%;
+        }
+        #img-tag {
+            width: 100%;
+        }
     }
-  }
 </style>
 </script>
 <script src="Assets/JS/Coustom_script.js"></script>

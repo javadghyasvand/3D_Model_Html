@@ -2,263 +2,265 @@
 <html lang="en">
 
 <head>
-  <title>Vebko 3D Model</title>
-  <meta charset="utf-8">
-  <meta name="description" content="&lt;model-viewer&gt; template">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" href="Assets/CSS/styles.css" rel="stylesheet" />
-  <link rel="icon" href="Assets/Image/Vebko_EN.ico" type="image/x-icon">
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap-utilities.css">
-  <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap.css">
-  <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap-grid.css">
-  <script src="Assets/bootstrap-5.3.0/js/bootstrap.js"></script>
-  <script src="Assets/bootstrap-5.3.0/js/bootstrap.bundle.js"></script>
+    <title>Vebko 3D Model</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="Assets/CSS/styles.css" rel="stylesheet" />
+    <link rel="icon" href="Assets/Image/Vebko_EN.ico" type="image/x-icon">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap.css">
+    <link rel="stylesheet" href="Assets/bootstrap-5.3.0/css/bootstrap-grid.css">
+    <script src="Assets/bootstrap-5.3.0/js/bootstrap.js"></script>
+    <script src="Assets/bootstrap-5.3.0/js/bootstrap.bundle.js"></script>
 
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-    crossorigin="anonymous"></script>
-  <!-- modelviewer -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-  <script src="Assets/JS/jquery-3.6.3.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <!-- modelviewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <script src="Assets/JS/jquery-3.6.3.js"></script>
 
 </head>
 
 <body>
-  <model-viewer id="Model_Tag" src="Assets/3D Models/TransformerTestModule.glb" ar-modes="webxr scene-viewer quick-look"
-    ar ios-src="Assets/3D Models/TransformerTestModule.glb" alt="AMT105" shadow-intensity="1"
-    camera-orbit="20deg 80deg 350.4m" field-of-view="30deg" cameracontrols="false">
-
-    <button type="button" id="Menu" class="btn btn-outline-info btn-sm  btn_Menu">
+    <model-viewer id="Model_Tag" src="Assets/3D Models/TransformerTestModule.glb" ar-modes="webxr scene-viewer quick-look" ar ios-src="Assets/3D Models/TransformerTestModule.glb" alt="AMT105" shadow-intensity="1" camera-orbit="20deg 80deg 350.4m" field-of-view="30deg"
+        cameracontrols="false">
+        <div class="loader text-center  z-3  ">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <button type="button" id="Menu" class="btn btn-outline-info btn-sm  btn_Menu">
       <img style="padding-top:3px;padding-bottom:3px;" src="Assets/Image/hamburger.png" width="25px">
     </button>
-    <div class="progress-bar hide" slot="progress-bar">
+        <div class="progress-bar hide" slot="progress-bar">
 
-      <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
+            <div class="update-bar"></div>
+        </div>
+        <div class="loader text-center  z-3  ">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <button slot="ar-button" id="ar-button">
       View in your space
     </button>
-    <div class="menu_list p-3" style="z-index:10000000000;">
-      <select class="Font-Size form-select" id="category" aria-label="Default select example">
+        <div class="menu_list p-3" style="z-index:10000000000;">
+            <select class="Font-Size form-select" id="category" aria-label="Default select example">
         <option class="Font-Size" value="AMT105">AMT105</option>
         <option class="Font-Size" value="AMT205">AMT205</option>
         <option class="Font-Size" value="Sale">Sale</option>
         <option class="Font-Size" value="Offices">Offices and Agency</option>
         <option class="Font-Size" value="Bassforinstrumenttests">Bass for instrument tests</option>
         <option class="Font-Size" value="CalibrationmoduleforAMT105">Calibration module for AMT105</option>
-        <option class="Font-Size" value="CBTestModule">CB Test Module</option>
+        <!-- <option class="Font-Size" value="CBTestModule">CB Test Module</option> -->
         <option class="Font-Size" value="CTandCVTTestModule">CT and CVT Test Module</option>
         <option class="Font-Size" value="TransformerTestModule" selected>Transformer Test Module</option>
       </select>
-      <div class="form-check mt-3 pl">
-        <input class="form-check-input " type="checkbox" value="" id="CameraControl">
-        <label class="form-check-label" for="CameraControl">
+            <div class="form-check mt-3 pl">
+                <input class="form-check-input " type="checkbox" value="" id="CameraControl">
+                <label class="form-check-label" for="CameraControl">
           Camera Control
         </label>
-      </div>
-      <button type="button" id="close_menu" class="btn btn-sub m-2 mt-1 display_none">Close Menu
+            </div>
+            <button type="button" id="close_menu" class="btn btn-sub m-2 mt-1 display_none">Close Menu
         <img class="float-start border-end border-2" src="Assets/Image/fast-forward-double-right-arrows-symbol.png">
       </button>
-      <hr>
-      <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.0rad 1.35rad 315m"
-        id="Front_TransformerTestModule"> Front
+            <hr>
+            <button type="button" class="btn btn-sub m-2 mt-1" data_orbit="0.0rad 1.35rad 315m" id="Front_TransformerTestModule"> Front
         Panel
       </button>
-      <button type="button" class="btn btn-sub m-2 mt-0" data_orbit="3.15rad 1.45rad 315m"
-        id="Back_TransformerTestModule"> Back
+            <button type="button" class="btn btn-sub m-2 mt-0" data_orbit="3.15rad 1.45rad 315m" id="Back_TransformerTestModule"> Back
         Panel
       </button>
-    </div>
-    <!-- fornt panel point -->
-    <button class="Hotspot  Hotspot_Front_TransformerTestModule d-none" slot="hotspot-1" id="TransformerTestModule"
-      side="Front" data-position="0.12m 4.3m 1.15m" data-normal="0m -1.35m 1m" data_orbit='-0.1rad 1.3 20m'
-      data-visibility-attribute="visible">
+        </div>
+        <!-- fornt panel point -->
+        <button class="Hotspot  Hotspot_Front_TransformerTestModule d-none" slot="hotspot-1" id="TransformerTestModule" side="Front" data-position="0.12m 4.3m 1.15m" data-normal="0m -1.35m 1m" data_orbit='-0.1rad 1.3 20m' data-visibility-attribute="visible">
       <div class="HotspotAnnotation d-none">Transformer Test Module</div>
     </button>
 
-  </model-viewer>
-  <!-- Tables PCconnection-->
-  <table id="TransformerTestModule_Table"
-    class="overflow-scroll table-hover table table-sm text-start table-responsive table-data d-none border-dark-subtle">
-    <tbody>
-      <tr>
-        <th colspan="4" class="text-center header-color  text-light">
-          <h5>Transformer Test Module (AMT1032)<button type="button"
-              class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button>
-          </h5>
-        </th>
-      </tr>
-      <tr>
-        <th class="align-middle Bg-TH">By Using this card all tests related to power transformers:</th>
-      </tr>
-      <tr>
-        <td colspan="3" class="align-middle"><strong>*</strong>Conversion ratio, phase displacement, no load current
-        </td>
-      </tr>
-      <tr>
-        <td colspan="3" class="align-middle"><strong>*</strong>Split Flux </td>
-      </tr>
-      <tr>
-        <td colspan="3" class="align-middle"><strong>*</strong>The continuity of Tap Changer </td>
-      </tr>
-      <tr>
-        <td colspan="3" class="align-middle"><strong>*</strong>Winding resistance </td>
-      </tr>
-      <tr>
-        <td colspan="3" class="align-middle"><strong>*</strong>Impedance Percentage</td>
-      </tr>
-      <tr>
-        <td colspan="3" class="align-middle"><strong>*</strong>Zero sequence impedance Fully automatic without having to
-          change the wire</td>
-      </tr>
-    </tbody>
-  </table>
+    </model-viewer>
+    <!-- Tables PCconnection-->
+    <table id="TransformerTestModule_Table" class="overflow-scroll table-hover table table-sm text-start table-responsive table-data d-none border-dark-subtle">
+        <tbody>
+            <tr>
+                <th colspan="4" class="text-center header-color  text-light">
+                    <h5>Transformer Test Module (AMT1032)<button type="button" class="m-1 p-2 close btn-close float-end border-light text-bg-light btn-sm" aria-label="close"></button>
+                    </h5>
+                </th>
+            </tr>
+            <tr>
+                <th class="align-middle Bg-TH">By Using this card all tests related to power transformers:</th>
+            </tr>
+            <tr>
+                <td colspan="3" class="align-middle"><strong>*</strong>Conversion ratio, phase displacement, no load current
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="align-middle"><strong>*</strong>Split Flux </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="align-middle"><strong>*</strong>The continuity of Tap Changer </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="align-middle"><strong>*</strong>Winding resistance </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="align-middle"><strong>*</strong>Impedance Percentage</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="align-middle"><strong>*</strong>Zero sequence impedance Fully automatic without having to change the wire</td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 <!-- Loads <model-viewer> for browsers: -->
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
 <script>
+    var Model_Viewer = document.querySelector("#Model_Tag");
 
-  var Model_Viewer = document.querySelector("#Model_Tag");
-  function getOribit() {
-    var date_orbit = Model_Viewer.cameraOrbit();
-    console.log(data_orbit.tostring())
-  }
-  $(".btn-sub").click(function (e) {
-    $("Hotspot").addClass("Hotspot_" + id);
-    $(".table").addClass("d-none");
-    $(".sub_Detailes").addClass("sub_Detailes")
-    if ($(".btn-sub").hasClass("Select")) {
-      $(".btn-sub").removeClass("Select");
+    function getOribit() {
+        var date_orbit = Model_Viewer.cameraOrbit();
+        console.log(data_orbit.tostring())
     }
-    if (!$(".Hotspot_Front_AMT105").hasClass("d-none")) {
-      $(".Hotspot").addClass("d-none");
-    }
-    if (!$(".Hotspot_Back_AMT105").hasClass("d-none")) {
-      $(".Hotspot_Back_AMT105").addClass("d-none");
-    }
-    if (!$(".Hotspot_Physical_AMT105").hasClass("d-none")) {
-      $(".Hotspot_Physical_AMT105").addClass("d-none");
-    }
-    var Orbit_Sub = $(this).attr("data_orbit");
-    var id = $(this).attr("id");
-    $(this).addClass("Select");
-    $(".Hotspot_" + id).removeClass("d-none");
-    Model_Viewer.cameraOrbit = Orbit_Sub;
-
-    if (window.screen.width <= "1000") {
-      $(".menu_list").addClass("d-none");
-
-    }
-  });
-
-  $(".Hotspot").click(function (e) {
-    var data_orbit = $(this).attr("data_orbit");
-    $(".table").addClass("d-none");
-    $(".HotspotAnnotation").addClass("d-none");
-    var child_hotspot = $(this).children()
-
-    if ($(child_hotspot).hasClass("d-none")) {
-      Model_Viewer.cameraOrbit = data_orbit;
-      $(child_hotspot).removeClass("d-none")
-      var Table_Id = $(this).attr("id");
-      setTimeout(() => {
-        $("#" + Table_Id + "_Table").removeClass("d-none")
-        if (window.screen.width <= "1000") {
-          $("#" + Table_Id + "_Table").removeClass("table-data")
+    $(".btn-sub").click(function(e) {
+        $("Hotspot").addClass("Hotspot_" + id);
+        $(".table").addClass("d-none");
+        $(".sub_Detailes").addClass("sub_Detailes")
+        if ($(".btn-sub").hasClass("Select")) {
+            $(".btn-sub").removeClass("Select");
         }
-      }
-        , 800);
+        if (!$(".Hotspot_Front_AMT105").hasClass("d-none")) {
+            $(".Hotspot").addClass("d-none");
+        }
+        if (!$(".Hotspot_Back_AMT105").hasClass("d-none")) {
+            $(".Hotspot_Back_AMT105").addClass("d-none");
+        }
+        if (!$(".Hotspot_Physical_AMT105").hasClass("d-none")) {
+            $(".Hotspot_Physical_AMT105").addClass("d-none");
+        }
+        var Orbit_Sub = $(this).attr("data_orbit");
+        var id = $(this).attr("id");
+        $(this).addClass("Select");
+        $(".Hotspot_" + id).removeClass("d-none");
+        Model_Viewer.cameraOrbit = Orbit_Sub;
+
+        if (window.screen.width <= "1000") {
+            $(".menu_list").addClass("d-none");
+
+        }
+    });
+
+    $(".Hotspot").click(function(e) {
+        var data_orbit = $(this).attr("data_orbit");
+        $(".table").addClass("d-none");
+        $(".HotspotAnnotation").addClass("d-none");
+        var child_hotspot = $(this).children()
+
+        if ($(child_hotspot).hasClass("d-none")) {
+            Model_Viewer.cameraOrbit = data_orbit;
+            $(child_hotspot).removeClass("d-none")
+            var Table_Id = $(this).attr("id");
+            setTimeout(() => {
+                $("#" + Table_Id + "_Table").removeClass("d-none")
+                if (window.screen.width <= "1000") {
+                    $("#" + Table_Id + "_Table").removeClass("table-data")
+                }
+            }, 800);
+        }
+    });
+    $(".Hotspot").focusout(function(e) {
+
+        $(".table").addClass("d-none");
+        $(".HotspotAnnotation").addClass("d-none");
+        var sideselected = $(this).attr("Side");
+        switch (sideselected) {
+            case "Front":
+                Model_Viewer.cameraOrbit = "0.0rad 1.35rad 315m"
+                break;
+
+            case "Back":
+                Model_Viewer.cameraOrbit = "3.15rad 1.45rad 315m"
+                break;
+
+            case "Physical":
+                Model_Viewer.cameraOrbit = "0.5rad 1.25rad 315m"
+                break;
+        }
+
+    });
+
+    $(".close").click(function(e) {
+        var table = $(this).offsetParent()
+        if (!$(table).hasClass("d-none")) {
+            table.addClass("d-none");
+            var point_id = $(table).attr("Id");
+            var point_class_setect = point_id.split("_");
+            var sideselected = $("#" + point_class_setect[0]).attr("Side")
+            $(".HotspotAnnotation").addClass("d-none");
+            switch (sideselected) {
+                case "Front":
+                    Model_Viewer.cameraOrbit = "0.0rad 1.35rad 315m"
+                    break;
+
+                case "Back":
+                    Model_Viewer.cameraOrbit = "3.15rad 1.45rad 315m"
+                    break;
+
+                case "Physical":
+                    Model_Viewer.cameraOrbit = "0.5rad 1.25rad 315m"
+                    break;
+            }
+        }
+
+    });
+
+    function SetOrbit(orbit) {
+        Model_Viewer.cameraOrbit = orbit;
+        $("#Date_Text").addClass("display-None")
+        if ($("#Date_Text").hasClass("display-None")) {
+            $("#Date_Text").addClass("display-Block");
+            $("#Date_Text").removeClass("display-None");
+        }
     }
-  });
-  $(".Hotspot").focusout(function (e) {
+    $("#CameraControl").change(function(e) {
+        checkBox = document.getElementById("CameraControl");
+        model = Model_Viewer;
+        if (checkBox.checked) {
+            Model_Viewer.cameracontrols = true;
+            Model_Viewer.cameraControls = true;
+        } else {
+            Model_Viewer.___cameraControls = false;
+            Model_Viewer.cameraControls = false
+        }
+    });
 
-    $(".table").addClass("d-none");
-    $(".HotspotAnnotation").addClass("d-none");
-    var sideselected = $(this).attr("Side");
-    switch (sideselected) {
-      case "Front":
-        Model_Viewer.cameraOrbit = "0.0rad 1.35rad 315m"
-        break;
+    $("#Menu").on("click", function() {
+        $(".menu_list").addClass("Show_Responsiv");
+        $(".menu_list").removeClass("d-none");
+        $("#Menu").css("display", "none !important");
+    });
 
-      case "Back":
-        Model_Viewer.cameraOrbit = "3.15rad 1.45rad 315m"
-        break;
+    $("#close_menu").on("click", function() {
+        $(".menu_list").addClass("d-none");
+    });
 
-      case "Physical":
-        Model_Viewer.cameraOrbit = "0.5rad 1.25rad 315m"
-        break;
-    }
-
-  });
-
-  $(".close").click(function (e) {
-    var table = $(this).offsetParent()
-    if (!$(table).hasClass("d-none")) {
-      table.addClass("d-none");
-      var point_id = $(table).attr("Id");
-      var point_class_setect = point_id.split("_");
-      var sideselected = $("#" + point_class_setect[0]).attr("Side")
-      $(".HotspotAnnotation").addClass("d-none");
-      switch (sideselected) {
-        case "Front":
-          Model_Viewer.cameraOrbit = "0.0rad 1.35rad 315m"
-          break;
-
-        case "Back":
-          Model_Viewer.cameraOrbit = "3.15rad 1.45rad 315m"
-          break;
-
-        case "Physical":
-          Model_Viewer.cameraOrbit = "0.5rad 1.25rad 315m"
-          break;
-      }
-    }
-
-  });
-  function SetOrbit(orbit) {
-    Model_Viewer.cameraOrbit = orbit;
-    $("#Date_Text").addClass("display-None")
-    if ($("#Date_Text").hasClass("display-None")) {
-      $("#Date_Text").addClass("display-Block");
-      $("#Date_Text").removeClass("display-None");
-    }
-  }
-  $("#CameraControl").change(function (e) {
-    checkBox = document.getElementById("CameraControl");
-    model = Model_Viewer;
-    if (checkBox.checked) {
-      Model_Viewer.cameracontrols = true;
-      Model_Viewer.cameraControls = true;
-    } else {
-      Model_Viewer.___cameraControls = false;
-      Model_Viewer.cameraControls = false
-    }
-  });
-
-  $("#Menu").on("click", function () {
-    $(".menu_list").addClass("Show_Responsiv");
-    $(".menu_list").removeClass("d-none");
-    $("#Menu").css("display", "none !important");
-  });
-
-  $("#close_menu").on("click", function () {
-    $(".menu_list").addClass("d-none");
-  });
-
-  $(document).ready(function () {
-    checkBox = document.getElementById("CameraControl");
-    model = Model_Viewer;
-    if (checkBox.checked) {
-      Model_Viewer.cameracontrols = true;
-      Model_Viewer.cameraControls = true;
-    } else {
-      Model_Viewer.___cameraControls = false;
-      Model_Viewer.cameraControls = false
-    }
-  });
+    $(document).ready(function() {
+        checkBox = document.getElementById("CameraControl");
+        model = Model_Viewer;
+        if (checkBox.checked) {
+            Model_Viewer.cameracontrols = true;
+            Model_Viewer.cameraControls = true;
+        } else {
+            Model_Viewer.___cameraControls = false;
+            Model_Viewer.cameraControls = false
+        }
+    });
 </script>
 <script src="Assets/JS/Coustom_script.js"></script>
 
